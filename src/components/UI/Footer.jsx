@@ -16,6 +16,19 @@ const Footer = () =>{
         }
     ]
 
+    const quickLinks02=[
+        {
+            path: '#',
+            display : '  Program'
+        },
+        {
+            path: '#',
+            display : 'Blue Collar Training'
+        }, {
+            path: '#',
+            display : 'College Placements'
+        }
+    ]
 
     return <footer className="footer">
         <div className="container">
@@ -29,6 +42,16 @@ const Footer = () =>{
                     <ul className="quick__links">
                         {
                             quickLinks01.map((item,index)=>
+                                <li className="quick__link-item" key={index}><a href={item.path}>{item.display}</a></li>)
+                        }
+                    </ul>
+                </div>
+
+                <div className="footer__quick-links">
+                    <div className="quick__links-title">Contact Us</div>
+                    <ul className="quick__links">
+                        {
+                            quickLinks02.map((item,index)=>
                                 <li className="quick__link-item" key={index}><a href={item.path}>{item.display}</a></li>)
                         }
                     </ul>

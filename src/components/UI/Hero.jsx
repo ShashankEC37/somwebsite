@@ -1,8 +1,9 @@
 import React from "react";
 import '../../styles/hero.css'
 import heroDarkImg from '../../images/video.jpg'
+ 
 const Hero = () =>{
-    return <section className="hero__section">
+    return <section className="hero__section" id="home">
          <div className="container">
             <div className="hero__wrapper">
                 <div className="hero__content">
@@ -18,7 +19,9 @@ const Hero = () =>{
                      </div>
             </div>
                 <div className="hero__img">
-                <img src={heroDarkImg} alt="hero-img" style={{width: "600px", height: "400px"}} />                  
+                <img src={heroDarkImg} alt="hero-img" style={{ maxWidth: '100%', height: 'auto' }} />
+
+                 
                     </div>
             </div>
          </div>

@@ -3,6 +3,11 @@
 
 /* css variables */
 :root {
+    --primary: #4400ff;
+    --secondary: #48fefe;
+    --dark: #212121;
+    --light: #F3F3F3;
+  
   --primary-color: #379cf6;
   --heading-color: #fff;
   --btn-primary-bg: #379cf6;
@@ -10,12 +15,7 @@
   --team-card-bg: #1b2352;
   --link-color: #fff;
   --link-active: #379cf6;
-  --card-bg: linear-gradient(
-    45deg,
-    rgba(15, 18, 61, 1) 33%,
-    rgba(15, 18, 61, 1) 52%,
-    rgba(11, 41, 69, 1) 84%
-  );
+  --card-bg:  linear-gradient(to bottom right, var(--primary), var(--secondary));
   --counter-color: linear-gradient(
     90deg,
     #02bba6 30%,
@@ -32,19 +32,24 @@
   --testimonial-bg: #1a0f4f;
   --font-name: "Roboto", sans-serif;
   --small-text-color: rgba(255, 255, 255, 0.774);
-  --icon-bg:#151e4f;
+  --icon-bg:#48fefe;
 }
 
 .light-theme {
   --body-bg: rgb(255, 255, 255);
   --heading-color: #0c123d;
-  --btn-secondary-bg: #816aff;
+  --btn-secondary-bg: #1b2352;
   --btn-primary-bg: #fff;
-  --primary-color: #816aff;
-  --counter-color: #fff;
-  --counter-section-bg: #816aff;
+  --primary-color: #1b2352;
+  --counter-color: #1b2352;
+  --counter-section-bg:linear-gradient(
+    180deg,
+    rgba(189, 243, 255, 1) 29%,
+    rgba(193, 243, 255, 1) 50%,
+    rgba(226, 250, 255, 1) 78%
+  );
   --link-color: #0c123d;
-  --link-active: #816aff
+  --link-active: #1b2352
   --newsletter-bg: linear-gradient(
     180deg,
     rgba(189, 243, 255, 1) 29%,
@@ -52,7 +57,13 @@
     rgba(226, 250, 255, 1) 78%
   );
   --small-text-color:#000;
-  --card-bg:#fff;
+  --card-bg:  linear-gradient(to bottom right, var(--primary), var(--secondary));
+  --counter-color: linear-gradient(
+    90deg,
+    #02bba6 30%,
+    rgba(29, 129, 176, 1) 55%,
+    rgba(35, 93, 173, 1) 75%
+  );
   --testimonial-bg: #f7f7f7;
   --team-card-bg: #fff;
 }
@@ -62,6 +73,7 @@
     padding:0;
     margin: 0;
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 body{
      background:var(--body-bg);
@@ -99,4 +111,33 @@ section{
   color: var(--primary-color);
   font-weight: 400;
   margin-bottom: 20px;
+}
+
+.light-theme .counter{
+  background: var(--counter-section-bg)
+}
+
+.light-theme .secondary__btn{
+  border: 1px solid var(--primary-color);
+  color: #090238;
+  font-weight: 600;
+}
+
+.light-theme a{
+  font-weight: 500;
+}
+
+.light-theme .team__img{
+  background: #ddd;
+}
+
+@media only screen and (max-width:1024px) {
+  .container{
+    width:100%;
+  }
+}
+@media only screen and (max-width:768px) {
+  section {
+    padding: 40px 0px;
+  }
 }
